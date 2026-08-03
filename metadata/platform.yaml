@@ -1,0 +1,32 @@
+platform:
+  name: PersonaDNA
+  codename: Genesis
+  version: 0.1.0-alpha
+  status: Foundation
+
+reference_architecture:
+  prefix: PRA
+  milestone: Milestone Zero
+  philosophy: Understand Before Generate
+
+repository:
+  documentation: docs/
+  source: src/
+  api: api/
+  sdk: sdk/
+  tests: tests/
+
+lifecycles:
+  immutable:
+    - docs/constitution
+
+  evolutionary:
+    - docs/architecture
+    - docs/engines
+    - docs/knowledge
+
+  operational:
+    - src
+    - api
+    - sdk
+    - tests
