@@ -5,8 +5,8 @@ Creates relationships between observations.
 """
 
 from personadna.core.base_engine import BaseEngine
-from personadna.models.relationship import Relationship
 from personadna.models.observation import Observation
+from personadna.models.relationship import Relationship
 
 
 class RelationshipEngine(BaseEngine):
