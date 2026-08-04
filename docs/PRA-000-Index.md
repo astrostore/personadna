@@ -67,3 +67,14 @@ It defines the official document numbering, categories, and status of every arch
 | Version | Description |
 |----------|-------------|
 | 0.1.0-alpha | Initial Reference Architecture Index |
+
+### Architecture Series
+
+| ID | Title | Status |
+|----|-------|--------|
+| PRA-100 | System Overview | Approved |
+| PRA-101 | Layered Architecture | Approved |
+| PRA-102 | Engine Contract Framework | Planned |
+| PRA-103 | Knowledge Object Model | Approved |
+| PRA-104 | Data Lifecycle | Planned |
+| PRA-105 | Learning Lifecycle | Planned |
