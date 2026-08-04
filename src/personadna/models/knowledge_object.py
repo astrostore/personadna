@@ -7,7 +7,7 @@ Universal information unit used throughout the platform.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Any
 
 
@@ -29,25 +29,24 @@ class KnowledgeObject:
 
     relationships: list = field(default_factory=list)
 
-    created_at: datetime = field(default_factory=datetime.utcnow)
+    created_at: datetime = field(
+        default_factory=lambda: datetime.now(UTC)
+    )
 
     version: int = 1
 
     processing_history: list = field(default_factory=list)
 
-    def add_observation(self, observation):
-
+    def add_observation(self, observation) -> None:
         self.observations.append(observation)
 
-    def add_relationship(self, relationship):
-
+    def add_relationship(self, relationship) -> None:
         self.relationships.append(relationship)
 
-    def log(self, stage: str):
-
+    def log(self, stage: str) -> None:
         self.processing_history.append(
             {
                 "stage": stage,
-                "time": datetime.utcnow().isoformat()
+                "time": datetime.now(UTC).isoformat(),
             }
         )
